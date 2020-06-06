@@ -1,0 +1,35 @@
+/* CSS Syntax:
+selector { property: value; }
+*/
+
+/* targets all hr elements */
+hr {
+    border-color: pink;
+    border-width: 5px;
+    /* specifies all four borders clockwise */
+    border-style: dotted none none none;
+    height: 0px;
+    width: 80%;
+}
+
+/* targets all h1 elements */
+h1 {
+    color: brown;
+}
+
+/* colon is css pseudo-class, used to define particular states
+https://www.w3schools.com/css/css_pseudo_classes.asp */
+img:hover {
+    border-radius: 100%;
+}
+
+/* targets all elements of dawg class */
+.dawg {
+    border-radius: 10px;
+}
+
+/* targets meh id. Ids are unique (only applied to one element), unlike classes */
+/* Use ids to identify instances; use classes to group related elements */
+#meh {
+    color: mediumseagreen;
+}

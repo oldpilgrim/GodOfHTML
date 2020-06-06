@@ -8,24 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The coolest dawg in all of dawgville">
     <title>Cool Dawg's Website</title>
-    <!-- Internal CSS -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Internal CSS
     <style>
-        /* targets all hr elements */
-        hr {
-            border-color: pink;
-            border-width: 5px;
-            /* specifies all four borders clockwise */
-            border-style: dotted none none none;
-            height: 0px;
-            width: 80%;
-        }
-
-    </style>
+    </style>--> 
 </head>
-<!-- inline CSS -->
+<!-- inline CSS. Overrides internal, which overrides external css -->
 <body style="background-color: rgb(113, 189, 255)">
-    <img src="https://i.kym-cdn.com/entries/icons/original/000/002/203/20533_cooldog.jpg" alt="That's me">
-    <h1>Sup Bro, Cool Dawg Here</h1>
+    <!-- One element can have multiple classes -->
+    <img class="dawg cool" src="https://i.kym-cdn.com/entries/icons/original/000/002/203/20533_cooldog.jpg" alt="That's me">
+    <h1 id="meh">Sup Bro, Cool Dawg Here</h1>
     <p>How my <b>homies</b> doin'</p>
     <p>I am the coolest dawg in all of dawgville</p>
     <!-- Some elements must not have a closing tag -->

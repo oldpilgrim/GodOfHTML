@@ -1,21 +1,14 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
+import InputArea from "./InputArea";
 
 function App() {
 
-  const [inputText, setInputText] = React.useState("");
   const [todoArray, setTodos] = React.useState([]);
 
-  function handleInputText(event) {
-    // note: cannot directly use event in hook setter
-    const text = event.target.value;
-    setInputText(text);
-  }
-
-  function handleButtonClick() {
+  function addItem(inputText) {
     // append to the current array with spread operator
     setTodos([...todoArray, inputText]);
-    setInputText("");
   }
 
   function deleteItem(id) {
@@ -29,13 +22,7 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <div className="form">
-        {/* This is controlled input */}
-        <input type="text" value={inputText} onChange={handleInputText}/>
-        <button onClick={handleButtonClick}>
-          <span>Add</span>
-        </button>
-      </div>
+      <InputArea onInputConfirm={addItem} />
       <div>
         <ul>
           {todoArray.map((item, index) => {
